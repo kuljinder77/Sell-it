@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/account"
+        android:icon="@drawable/messenger_button_send_round_shadow"
+        android:title="My Account"/>
+    <item android:id="@+id/settings"
+        android:icon="@drawable/messenger_button_send_round_shadow"
+        android:title="Settings"/>
+    <item android:id="@+id/mycart"
+        android:icon="@drawable/messenger_button_send_round_shadow"
+        android:title="My Cart"/>
+</menu>

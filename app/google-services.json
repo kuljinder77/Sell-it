@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "687339693560",
+    "firebase_url": "https://sell-it-92d66.firebaseio.com",
+    "project_id": "sell-it-92d66",
+    "storage_bucket": "sell-it-92d66.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687339693560:android:de8f07664a12e0a7",
+        "android_client_info": {
+          "package_name": "com.example.kuljindersingh.sellit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "687339693560-th2qpkkd8h7cn85e96a9ap3530d79p5m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kuljindersingh.sellit",
+            "certificate_hash": "3059329f8c91fb13ead08e43df64b049c8c6c7b6"
+          }
+        },
+        {
+          "client_id": "687339693560-au03hcq2p6oj7f7589k6snqk6q8bsk30.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx_ThDompm4r6wM8WzJQrJnrxwC0RWKxY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "687339693560-au03hcq2p6oj7f7589k6snqk6q8bsk30.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
