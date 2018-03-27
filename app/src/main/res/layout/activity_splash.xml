@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.kuljindersingh.sellit.Splash">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/back"
+        android:background="@drawable/banner_480x800"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/s_logo_1"
+        android:id="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:padding="5dp"
+        android:id="@+id/sellit"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/logo"
+        android:text="Sell it"/>
+    <TextView
+        android:id="@+id/copyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/sellit"
+        android:text="v0.1 \u00a9 2018 Kuljinder Singh "
+        android:textSize="15dp" />
+
+</RelativeLayout>

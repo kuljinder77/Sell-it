@@ -1,16 +1,14 @@
 package com.example.kuljindersingh.sellit;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -39,6 +37,7 @@ public class Register extends AppCompatActivity {
         password = (EditText)findViewById(R.id.password);
         confirm_password = (EditText)findViewById(R.id.confirmpassword);
         alert = (TextView) findViewById(R.id.alert);
+        front_animation();
         progressDialog = new ProgressDialog(this);
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,5 +121,21 @@ public class Register extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void front_animation() {
+        Animation anim_right , anim_left , anim_upper;
+        anim_left = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slide_from_left);
+        anim_right = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slide_from_right);
+        anim_upper = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slide_from_up);
+
+        regiter.setAnimation(anim_right);
+        cancel.setAnimation(anim_left);
+        email.setAnimation(anim_right);
+        password.setAnimation(anim_left);
+        confirm_password.setAnimation(anim_upper);
+
+
+
     }
 }

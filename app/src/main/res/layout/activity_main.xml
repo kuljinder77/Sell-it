@@ -5,24 +5,18 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.chirag.navigationdrawer.MainActivity"
-    android:background="@android:color/holo_green_dark">
+    tools:context="com.example.kuljindersingh.sellit.MainActivity"
+    android:background="@color/colorskyback">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-
-        <TextView
-            android:layout_width="wrap_content"
+        <ImageView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Main"
-            android:textSize="50dp"
-            android:id="@+id/textView"
-            android:layout_marginTop="200dp"
-            android:layout_marginLeft="130dp"/>
-
-
+            android:id="@+id/image_banner"
+            android:src="@drawable/banner2"/>
+        
     </RelativeLayout>
 
     <android.support.design.widget.NavigationView
@@ -30,7 +24,6 @@
         android:layout_height="match_parent"
         app:menu="@menu/navigation_menu"
         android:layout_gravity="start"
-        app:headerLayout="@layout/nav_header"
         android:id="@+id/nv">
 
     </android.support.design.widget.NavigationView>

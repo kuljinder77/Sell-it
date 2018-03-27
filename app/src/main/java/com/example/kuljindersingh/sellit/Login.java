@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -57,6 +59,7 @@ public class Login extends AppCompatActivity {
     private ProgressDialog progressDialog;
     private TextView login_alert;
 
+
     private GoogleSignInClient mGoogleSignInClient;
 
     @Override
@@ -66,14 +69,17 @@ public class Login extends AppCompatActivity {
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_login);
         googlebtn = (SignInButton) findViewById(R.id.google_sign_in);
+
         signin =(Button)findViewById(R.id.signin) ;
         register =(Button)findViewById(R.id.register) ;
         email = (EditText)findViewById(R.id.username);
         password = (EditText)findViewById(R.id.password);
-        progressDialog = new ProgressDialog(this);
+        progressDialog = new ProgressDialog(getApplicationContext());
         login_alert = (TextView) findViewById(R.id.login_alert);
         progressDialog.setTitle("Please wait");
         progressDialog.setMessage("Loading....");
+
+        front_animation();
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,7 +92,6 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 signin_user();
-                progressDialog.dismiss();
             }
         });
 
@@ -94,9 +99,9 @@ public class Login extends AppCompatActivity {
         googlebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                progressDialog.show();
+
                 signIn();
-                progressDialog.dismiss();
+
             }
         });
         // Configure Google Sign In
@@ -126,7 +131,7 @@ public class Login extends AppCompatActivity {
             public void onSuccess (LoginResult loginResult){
                 Log.d(TAG1, "facebook:onSuccess:" + loginResult);
                 loginButton.setVisibility(View.INVISIBLE);
-                progressDialog.show();
+
                 handleFacebookAccessToken(loginResult.getAccessToken());
 
             }
@@ -145,7 +150,21 @@ public class Login extends AppCompatActivity {
         });
 
     }
-///// user sign in with email and password
+
+    private void front_animation() {
+        Animation anim_bottom , anim_right , anim_left;
+        anim_bottom = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slide_from_bottom);
+        anim_left = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slide_from_left);
+        anim_right = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slide_from_right);
+
+        signin.setAnimation(anim_bottom);
+        register.setAnimation(anim_bottom);
+        email.setAnimation(anim_right);
+        password.setAnimation(anim_left);
+
+    }
+
+    ///// user sign in with email and password
     private void signin_user() {
         if(email.getText().toString().isEmpty() || password.getText().toString().isEmpty())
         {
@@ -153,15 +172,13 @@ public class Login extends AppCompatActivity {
 
         }
         else {
-            progressDialog.show();
             mAuth.signInWithEmailAndPassword(email.getText().toString(), password.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         if (mAuth.getCurrentUser().isEmailVerified()) {
                             Toast.makeText(getApplicationContext(), "login successfull", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                            startActivity(intent);
+                            intent_main();
 
                         } else {
                             Toast.makeText(getApplicationContext(), "Please verify first", Toast.LENGTH_LONG).show();
@@ -174,6 +191,12 @@ public class Login extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    private void intent_main() {
+        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 
 
@@ -223,13 +246,11 @@ public class Login extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            progressDialog.dismiss();
+
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Intent intent = new Intent(getApplicationContext(), Profile.class);
-                            startActivity(intent);
-                            finish();
+                            intent_main();
 
 
                         } else {
@@ -257,10 +278,8 @@ public class Login extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG1, "signInWithCredential:success");
-                            progressDialog.dismiss();
-                            Intent intent = new Intent(getApplicationContext(), Profile.class);
-                            startActivity(intent);
-                            finish();
+
+                            intent_main();
 
                         } else {
                             // If sign in fails, display a message to the user.
