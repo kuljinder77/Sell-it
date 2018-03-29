@@ -7,6 +7,10 @@ Sell it is an ongoing android application which will allow user to sign in by va
 
 # User can login using facebook and gmailid.
 
+#Splash screen
+
+<img src="https://user-images.githubusercontent.com/30164269/38102971-f461eed2-3352-11e8-9c6e-a04dff84e45f.jpg" alt="Splash screen" width="130" height="150">
+
 #Login screen
 
 <img src="https://user-images.githubusercontent.com/30164269/38103356-20dc6fb8-3354-11e8-9648-701447464400.jpg" alt="Splash screen" width="130" height="150">
@@ -15,7 +19,7 @@ Sell it is an ongoing android application which will allow user to sign in by va
 
 <img src="https://user-images.githubusercontent.com/30164269/38102969-f2ede42a-3352-11e8-905b-cf67b395f334.jpg" alt="Splash screen" width="130" height="150">
 
-#Splash screen
 
-<img src="https://user-images.githubusercontent.com/30164269/38102971-f461eed2-3352-11e8-9c6e-a04dff84e45f.jpg" alt="Splash screen" width="130" height="150">
+#Post an ad screen
 
+<img src="https://user-images.githubusercontent.com/30164269/38103595-c6519914-3354-11e8-97e2-8cc331110ea9.jpg" alt="Splash screen" width="130" height="150">
