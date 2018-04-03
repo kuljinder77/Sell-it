@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorskyback"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".post_add">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_header"
+        android:orientation="vertical"
+        android:background="@drawable/banner2">
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:gravity="center"
+        android:textSize="30dp"
+        android:id="@+id/label_cat"
+        android:layout_marginTop="40dp"
+        android:text="Post your add !"/>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/capture_view"
+        android:src="@drawable/ic_add"
+        android:scaleType="centerCrop"
+        android:layout_below="@+id/label_cat"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/capture_view">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="50dp"
+            android:hint="Name of the item"
+            android:gravity="center"
+            android:id="@+id/item_name"
+            android:layout_gravity="center"
+            android:background="@drawable/imageshape"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/cat_spinner"
+            android:background="@drawable/imageshape"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center">
+
+        </Spinner>
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="10dp"
+            android:hint="Description"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:background="@drawable/imageshape"
+            android:layout_gravity="center"
+            android:inputType="textMultiLine" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="10dp"
+            android:hint="Contact Information"
+            android:gravity="center"
+            android:id="@+id/contact"
+            android:layout_gravity="center"
+            android:background="@drawable/imageshape"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+            <Button
+                android:id="@+id/button_post"
+                android:layout_height="60sp"
+                android:layout_width="140sp"
+                android:text="Post"
+                android:textStyle="bold|italic"
+                android:background="@drawable/imageshape"
+                android:longClickable="true"
+                >
+            </Button>
+            <Button
+                android:id="@+id/cancel_post_ad"
+                android:layout_marginLeft="10sp"
+                android:layout_height="60sp"
+                android:layout_width="140sp"
+                android:text="Cancel"
+                android:textStyle="bold|italic"
+                android:background="@drawable/imageshape"
+
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

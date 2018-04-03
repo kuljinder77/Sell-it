@@ -10,17 +10,47 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <ImageView
+        android:layout_height="match_parent"
+        android:id="@+id/layout_header">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/image_banner"
-            android:src="@drawable/banner2"/>
-        
+            android:orientation="vertical"
+            android:background="@drawable/banner2">
+            </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:gravity="center"
+            android:textSize="40dp"
+            android:id="@+id/label_cat"
+            android:layout_marginTop="20dp"
+            android:text="Categories"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/button_all_cat"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/imageshape"
+            android:text="All categories"
+            android:layout_marginHorizontal="20dp"
+            android:layout_below="@+id/label_cat"/>
+
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/button_all_cat"
+            android:numColumns="2"
+            android:gravity="center"
+            android:id="@+id/grid_front"
+            ></GridView>
+
+
+
     </RelativeLayout>
 
     <android.support.design.widget.NavigationView
         android:layout_width="wrap_content"
+
         android:layout_height="match_parent"
         app:menu="@menu/navigation_menu"
         android:layout_gravity="start"

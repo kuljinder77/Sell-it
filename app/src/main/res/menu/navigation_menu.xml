@@ -2,11 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/account"
-        android:icon="@drawable/messenger_button_send_round_shadow"
+        android:icon="@drawable/ic_profile"
         android:title="My Account"/>
-    <item android:id="@+id/settings"
-        android:icon="@drawable/messenger_button_send_round_shadow"
-        android:title="Settings"/>
+    <item android:id="@+id/post_add"
+        android:icon="@drawable/ic_add"
+        android:title="Post an Add !"/>
 
         <item android:id="@+id/logout_nav"
             android:title="Logout"/>
