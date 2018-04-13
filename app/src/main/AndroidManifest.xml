@@ -5,6 +5,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
@@ -38,7 +39,7 @@
         </activity>
         <activity android:name=".post_add" />
         <activity android:name=".Show_ads" />
-        <activity android:name=".Ad_details"></activity>
+        <activity android:name=".Ad_details" />
     </application>
 
 </manifest>
