@@ -5,7 +5,7 @@ Sell it is an ongoing android application which will allow user to sign in by va
 
 # Registered user via email and custom password from the app should be verified first to log into the app.
 
-# User can login using facebook and gmailid.
+# FB integration User can login using facebook and gmailid.
 
 #Splash screen
 
