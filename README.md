@@ -23,3 +23,7 @@ Sell it is an ongoing android application which will allow user to sign in by va
 #Post an ad screen
 
 <img src="https://user-images.githubusercontent.com/30164269/38103595-c6519914-3354-11e8-97e2-8cc331110ea9.jpg" alt="Splash screen" width="130" height="150">
+
+#Front after login
+
+<img src="https://user-images.githubusercontent.com/30164269/39078685-dddc8638-44da-11e8-972b-661156e571d0.jpg" alt="Front screen" width="130" height="150">
